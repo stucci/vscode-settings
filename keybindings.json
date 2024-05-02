@@ -1,0 +1,298 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    {
+        "key": "cmd+alt+v",
+        "command": "toggleVim"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus || terminalFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight",
+        "when": "textInputFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorHasSelection && editorFocus"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "editor.action.moveSelectionToNextFindMatch",
+        "when": "editorHasSelection && editorFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.addSelectionToPreviousFindMatch",
+        "when": "editorHasSelection && editorFocus"
+    },
+    {
+        "key": "ctrl+cmd+p",
+        "command": "editor.action.moveSelectionToPreviousFindMatch",
+        "when": "editorHasSelection && editorFocus"
+    },
+    {
+        "key": "cmd+s",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "space",
+        "command": "workbench.action.openRecent",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "shift+alt+t",
+        "command": "openInTerminal",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "revealFileInOS",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+j t",
+        "command": "workbench.action.tasks.runTask",
+        "args": "test",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+j b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+j g",
+        "command": "workbench.action.tasks.runTask",
+        "args": "gen",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+j cmd+k",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build-test",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+j s",
+        "command": "workbench.action.tasks.runTask",
+        "args": "build-submit",
+        "when": "editorFocus"
+    },
+    {
+        "key": "s e",
+        "command": "workbench.action.evenEditorWidths",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s m",
+        "command": "workbench.action.minimizeOtherEditorsHideSidebar",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s j",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s k",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s shift+H",
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s shift+L",
+        "command": "workbench.action.moveEditorToRightGroup",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s v",
+        "command": "workbench.action.splitEditor",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s s",
+        "command": "workbench.action.splitEditorOrthogonal",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "s a",
+        "command": "workbench.action.joinAllGroups",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "t s",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "t w",
+        "command": "editor.action.toggleWordWrap",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "t b",
+        "command": "breadcrumbs.toggle",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "t n",
+        "command": "workbench.action.files.newUntitledFile",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "t m",
+        "command": "editor.action.toggleMinimap",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.triggerSuggest",
+        "when": "!suggestWidgetVisible && editorFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.triggerSuggest",
+        "when": "!suggestWidgetVisible && editorFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'"
+    },
+    {
+        "key": ";",
+        "command": "workbench.action.showCommands",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadOnly && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "!inDebugRepl && vim.mode != 'Insert' && terminal.active"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "!inDebugRepl && vim.mode != 'Insert' && terminal.active"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {"text":"\u001b[A\u000D"},
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "multiCommand.copyAndComment",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "multiCommand.insertHeader",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+m",
+        "command": "-markdown.extension.editing.toggleMath",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "markdown.extension.editing.toggleCodeBlock",
+        "when": "editorTextFocus && !editorReadonly && vim.mode == 'Insert' && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "editorTextFocus && textCompareEditorVisible"
+    },
+    {
+        "key": "right",
+        "command": "git.stageSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "editorTextFocus && textCompareEditorVisible"
+    },
+    {
+        "key": "cmd+j",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor && !textCompareEditorVisible"
+    },
+    {
+        "key": "cmd+k",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor && !textCompareEditorVisible"
+    },
+    {
+        "key": "cmd+j",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus && !hasSearchResult && !inSearchEditor && !textCompareEditorVisible"
+    },
+    {
+        "key": "cmd+k",
+        "command": "editor.action.marker.prevInFiles",
+        "when": "editorFocus && !hasSearchResult && !inSearchEditor && !textCompareEditorVisible"
+    },
+    {
+        "key": ",",
+        "command": "copilot-labs.use-brush-picker",
+        "when": "editorTextFocus && !editorReadonly && vim.mode != 'Normal' && vim.mode != 'Insert'"
+    },
+    {
+        "key": ",",
+        "command": "multiCommand.useBrushPicker",
+        "when": "editorTextFocus && !editorReadonly && vim.mode == 'Normal'"
+    },
+    {
+        "key": "cmd+shift+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "cmd+k",
+        "command": "aipopup.action.modal.generate",
+        "when": "editorFocus"
+    },
+]
